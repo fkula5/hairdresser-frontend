@@ -7,7 +7,7 @@
     width: 1280px;
     height: 145px;
     left: 0;
-    background-color: #6f115e;
+    background-color: #be25a2;
   }
   .header .week{
     font-size: 14px;
@@ -73,7 +73,7 @@
     justify-content: center;
     align-items: flex-start; /* Wyśrodkowanie zawartości do góry */
     color: rgb(0, 0, 0);
-    background-color: #eb90da;
+    background-color: #eed2e9;
     width: 100%;
     max-width: 35%; /* Ustaw maksymalną szerokość */
     margin: 0 auto; /* Wyśrodkuj sekcję na stronie */
@@ -108,7 +108,7 @@
   width: 100%;
   height: 215px;
   text-align: center;
-  background-color: #6f115e;
+  background-color: #be25a2;
 }
 .footer p {
   font-size: 14px;
@@ -145,7 +145,7 @@
 .services {
   color: rgb(0, 0, 0);
   padding: 20px;
-  background-color: #eb90da;
+  background-color: #eed2e9;
   display: flex;
   flex-wrap: wrap;
   margin-right: 0px;
@@ -167,6 +167,7 @@
 
 .hairdressers {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-bottom: 20px; 
 }
@@ -189,7 +190,7 @@
 }
 
 .hairdresser-info:hover {
-  background-color: #c280b7; /* tło ramki */
+  background-color: #eed2e9; /* tło ramki */
 }
 
 .name {
@@ -226,7 +227,7 @@
   justify-content: center;
   align-items: center;
   height: 50vh;
-  background-color: #eb90da; 
+  background-color: #eed2e9; 
 }
 
 .log {
@@ -280,7 +281,7 @@ label {
   justify-content: center;
   align-items: center;
   height: 75vh;
-  background-color: #eb90da;
+  background-color: #eed2e9;
 }
 
 .registration-form {
@@ -342,33 +343,38 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #eb90da;
+  background-color: #eed2e9;
+  color: black; /* zmiana koloru czcionki na czarny */
 }
 
 .horizontal-mini-calendar {
   display: flex;
+  color: #6f115e; /* kolor dni */
   justify-content: center;
 }
 
 .calendar-day {
   display: flex;
   flex-direction: column;
+  color: #6f115e; /* kolor dni */
   align-items: center;
   margin: 0 10px;
   cursor: pointer;
 }
 
 .calendar-day.selected {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #9d00ff;
+  color: #6f115e;
 }
 
 .day-label {
   font-size: 14px;
+  color: #6f115e;
 }
 
 .day-number {
   font-size: 24px;
+  color: #6f115e;
 }
 
 .select-time {
@@ -381,4 +387,7 @@ label {
 
 .submit-button {
   margin-top: 20px;
+  background-color: #fff; /* zmiana koloru tła guzika na jasny */
+  color: #6f115e; /* zmiana koloru tekstu guzika na ciemny */
+  border: 1px solid #6f115e; /* zmiana koloru obramowania guzika na ciemny */
 }
