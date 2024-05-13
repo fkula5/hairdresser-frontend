@@ -1,28 +1,6 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+/* base styles */
+* {
   margin: 0;
   display: flex;
   place-items: center;
@@ -65,4 +43,48 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.header h1 {
+  color: #9e13a3;
+}
+.header .links {
+  margin-left: auto;
+}
+.header a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.header a:hover {
+  color: #9e13a3;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+/* hairdressers previews / list */
+.hairdressers-preview {
+  padding: 10px 16px;
+  margin: 30px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.hairdressers {
+  text-align: center; /* Wysrodkowanie poziome */
+}
+.hairdressers-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.hairdressers-preview h2 {
+  font-size: 20px;
+  color: #9e13a3;
+  margin-bottom: 8px;
 }
