@@ -1,45 +1,393 @@
-.footer {
-    font-family: 'Arial', sans-serif; 
+/* header */
+  .header {
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    align-items: center;
+    width: 1280px;
+    height: 145px;
+    left: 0;
+    background-color: #be25a2;
   }
-  
-.footer p {
+  .header .week{
     font-size: 14px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between; /* Umieść guziki i napis na przeciwnych krańcach kontenera */
+    align-items: center; 
+  }
+  .button {
+    background-color: #d139cf;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px; /* Dodaj odstęp między guzikami */
+  }
+  .button2 {
+    background-color: #0d000d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px; 
+  }
+  .button3 {
+    background-color: #0b000b;;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px; 
+  }
+  .button4 {
+    background-color: #0b000b;;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+/* info */
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Wyśrodkowanie zawartości do góry */
+    color: rgb(0, 0, 0);
+    background-color: #eed2e9;
+    width: 100%;
+    max-width: 35%; /* Ustaw maksymalną szerokość */
+    margin: 0 auto; /* Wyśrodkuj sekcję na stronie */
+    
+  }
+  .line {
+    width: 100%;
+    height: 0.05px;
+    background-color: black;
+    margin: 10px 0; /* Dodanie odstępu nad i pod linią /* */
+  }
+.info .week p:not(.title),
+.info .hours p:not(.title) {
+  font-size: 14px; /* Ustawienie mniejszego rozmiaru czcionki */
+}
+ .hours p:nth-of-type(1),
+ .week p:nth-of-type(1) 
+ {
+    font-size: 24px;
+    margin: 0; 
+    text-align: center;
+    flex: 1; /* Każda kolumna zajmuje równe miejsce */
+    padding: 0 10px; /*Dodatkowy padding dla estetyki*/
+  }
+
+/* footer */
+.footer {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Wyśrodkowanie zawartości w pionie */
+  width: 100%;
+  height: 215px;
+  text-align: center;
+  background-color: #be25a2;
 }
 .footer p {
-    margin: 20px; 
+  font-size: 14px;
+  margin: 20px; /* Dodanie marginesu na górze i na dole */
 }
-.name p:nth-of-type(2){
-    color: aqua;
+.name p:nth-of-type(2) {
+  color: rgb(247, 248, 248);
 }
-
-.name h1:nth-of-type(1){
-    color: rgb(122, 8, 70);
+.name h1:nth-of-type(1) {
+  color: rgb(251, 248, 250);
 }
 .name,
 .social {
-  width: 30%; 
+  width: 30%;
+}
+.name p:nth-of-type(1) {
+  color: rgb(247, 243, 247);
+}
+.social h2:nth-of-type(1) {
+  color: rgb(246, 251, 248);
+}
+.social a:nth-of-type(1) {
+  color: rgb(252, 7, 7);
+}
+.social a:nth-of-type(2) {
+  color: rgb(255, 1, 166);
+}
+.social a:nth-of-type(3) {
+  color: rgb(7, 105, 243);
 }
 
-.name p:nth-of-type(1){
-    color: rgb(214, 63, 197);
-}
-.social h2:nth-of-type(1){
-    color: rgb(60, 201, 114);
-}
 
-.social a:nth-of-type(1){
-    color: rgb(101, 172, 219);
-}
-
-
-.social a:nth-of-type(2){
-    color: rgb(51, 183, 137);
+/* services */
+.services {
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  background-color: #eed2e9;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0px;
 }
 
+.section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fcf9f9;
+}
 
-.social a:nth-of-type(3){
-    color: rgb(230, 163, 54);
+.hairdressers,
+.info {
+  flex: 1;
+  min-width: 200px; /* Minimalna szerokość każdej kolumny */
+  margin-right: 20px; /* Odstęp między kolumnami */
+}
+
+
+.hairdressers {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 20px; 
+}
+
+.hairdresser {
+  width: calc(33.33% - 20px);
+  border: 1px solid #6f115e; /* kolor ramek */
+  border-radius: 5px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hairdresser:hover {
+  box-shadow: 0px 0px 5px 0px #ccc;
+}
+
+.hairdresser-info {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hairdresser-info:hover {
+  background-color: #eed2e9; /* tło ramki */
+}
+
+.name {
+  font-weight: bold;
+}
+
+.details {
+  padding: 10px;
+}
+
+.service-item {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.service-item p {
+  margin: 5px 0;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.price {
+  text-align: right;
+  margin-top: 5px;
+}
+
+
+/* login */
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #eed2e9; 
+}
+
+.log {
+  background-color: #100b0b;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* register */
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  background-color: #eed2e9;
+}
+
+.registration-form {
+  background-color: #050404;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registration-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.registration-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.registration-group label {
+  font-weight: bold;
+  display: block;
+}
+
+.registration-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.registration-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.registration-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+/* schedule */
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eed2e9;
+  color: black; /* zmiana koloru czcionki na czarny */
+}
+
+.horizontal-mini-calendar {
+  display: flex;
+  color: #6f115e; /* kolor dni */
+  justify-content: center;
+}
+
+.calendar-day {
+  display: flex;
+  flex-direction: column;
+  color: #6f115e; /* kolor dni */
+  align-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.calendar-day.selected {
+  background-color: #9d00ff;
+  color: #6f115e;
+}
+
+.day-label {
+  font-size: 14px;
+  color: #6f115e;
+}
+
+.day-number {
+  font-size: 24px;
+  color: #6f115e;
+}
+
+.select-time {
+  margin-top: 20px;
+}
+
+.service-info {
+  margin-top: 20px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  background-color: #fff; /* zmiana koloru tła guzika na jasny */
+  color: #6f115e; /* zmiana koloru tekstu guzika na ciemny */
+  border: 1px solid #6f115e; /* zmiana koloru obramowania guzika na ciemny */
 }
