@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles.css';
 
 function Grades({ name }) {
-  const [stars, setStars] = useState(0); // Stan przechowujący aktualną ocenę
+  const [stars, setStars] = useState(0);
 
   // Funkcja obsługi kliknięcia gwiazdki
   const handleStarClick = (starValue) => {
@@ -17,8 +17,8 @@ function Grades({ name }) {
           {[1, 2, 3, 4, 5].map((star) => (
             <span
               key={star}
-              className={star <= stars ? "star active" : "star"} // Dodanie klasy "active" dla aktywnych gwiazdek
-              onClick={() => handleStarClick(star)} // Obsługa kliknięcia gwiazdki
+              className={star <= stars ? "star active" : "star"} 
+              onClick={() => handleStarClick(star)} 
             >
               ★ {/* Unicode dla gwiazdki */}
             </span>

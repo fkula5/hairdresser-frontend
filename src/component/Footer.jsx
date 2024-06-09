@@ -1,24 +1,32 @@
 import React from 'react';
+import fb from './fb.png'
+import ig from './ig.png'
 import './styles.css'
 
 function Footer() {
   return (
     <div className="footer">
-        <div className='name'>
-            <h1>Cut&Book</h1>
-            <p>e-mail: Cut&Book@gmail.com</p>
-            <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+      <div className='left-section'>
+        <div className='address'>
+        <div className='logom'>
+          <h2>Cut&Book</h2>
+          <p>62 Thomas Street, New York</p>
+          <p>NY 10013</p>
+          <div className='social-icons'>
+            <a href='https://www.facebook.com/'><img src={fb} alt='Facebook'/></a>
+            <a href='https://www.instagram.com/'><img src={ig} alt='Instagram'/></a>
+          </div>
+          </div>
         </div>
-        <div className='social'>
-            <h2>Information: </h2>
-            <p></p>
-            <a href='https://www.youtube.com/'>Link to our YT</a>
-            <p></p>
-            <a href='https://www.instagram.com/'>Link to our IG</a>
-            <p></p>
-            <a href='https://www.facebook.com/'>Link to our FB</a>
+      </div>
+      <div className='right-section'>
+        <div className='contact-info'>
+          <h2>RESERVATION AND INFORMATION</h2>
+          <p>+1 (212) 555-1234</p>
+          <h2>QUESTIONS AND SUGGESTIONS</h2>
+          <p>info@cut&book.com</p>
         </div>
-      
+      </div>
     </div>
   );
 }

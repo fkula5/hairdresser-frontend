@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './logo.png'
 import './styles.css'
 
 function Header({setComponent}) {
@@ -9,11 +10,18 @@ function Header({setComponent}) {
   return (
     <div className="header">
         <div className='week'>
+          <div className='logo'>
+          <img src={logo}>
+          </img>
           <h1>Cut&Book</h1>
-          <button class="button2" onClick={()=>{handleClick("home")}}>Home</button>
-          <button class="button3" onClick={()=>{handleClick("login")}}>Login</button>
-          <button class="button4" onClick={()=>{handleClick("register")}}>Register</button>
-        </div>
+          </div>
+          
+          <div className ="buttons-dev">
+          <button class="buttons" onClick={()=>{handleClick("home")}}>Home</button>
+          {/* <button class="buttons" onClick={()=>{handleClick("login")}}>Login</button>
+          <button class="buttons" onClick={()=>{handleClick("register")}}>Register</button> */}
+          </div> 
+          </div>         
     </div>
   );
 }

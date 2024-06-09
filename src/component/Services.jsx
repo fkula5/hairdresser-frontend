@@ -1,113 +1,131 @@
 import React, { useState } from 'react';
-import Grades from './Grades';
+import loca from './loca.png';
+import fry1d from './fry1d.png';
+import fry2d from './fry2d.png';
+import fry3c from './fry3c.png';
 import './styles.css';
-
-function Services({setComponent}) {
+import Grades from './Grades';
+function Services({ setComponent }) {
   const [expanded, setExpanded] = useState(null);
 
   const toggleExpand = (index) => {
-    if (expanded === index) {
-      setExpanded(null);
-    } else {
-      setExpanded(index);
-    }
+    setExpanded(expanded === index ? null : index);
   };
 
   const handleClick = (command) => {
-    setComponent(c=>c=command)
-}
+    setComponent((c) => (c = command));
+  };
 
   return (
     <div className="services">
-      <div className="header">
-        <h2 className="section-titlesss">Hairdressing Cut&Book     </h2>
-        <p>62 Thomas Street, New York, NY 10013        </p>  
-        <Grades name="John Doe" />
-        <Grades name="Jane Smith" />
-        <Grades name="Michael Johnson" />
+      <div className="localization">
+        <img src={loca} alt="Localization" />
+        <p>Localization:</p>
+        <p>62 Thomas Street, New York, NY 10013</p>
       </div>
-      <div className='hairdressers'>
+      
+
+      <div className="hairdressers">
+        <div className="ourhairdressers">
+          <h2>Our hairdressers:</h2>
+        </div>
         {hairdressers.map((hairdresser, index) => (
-          <div key={index} className={`hairdresser ${expanded === index ? 'expanded' : ''}`} onClick={() => toggleExpand(index)}>
-            <div className="hairdresser-info">
-              <p className="name">{hairdresser.name}</p>
-              {expanded === index && (
-                <div className="details">
-                  {hairdresser.services.map((service, i) => (
-                    <div key={i} className="service-item">
-                      <p>{service.name} - {service.price}</p>
-                      <button class="button" onClick={()=>{handleClick("book")}}>Book</button>
-                 
-                    </div>
-                  ))}
-                </div>
-              )}
+          <div key={index} className={`hairdresser-info ${expanded === index ? 'expanded' : ''}`}>
+            <div className="hairdresser-row">
+              <img src={hairdresser.image} alt={hairdresser.name} className="hairdresser-image" />
+              <div className="hairdresser-details">
+                <p className="hairdresser-name">{hairdresser.name}</p>
+                <button className="button hairdresser-offer" onClick={() => toggleExpand(index)}>
+                  View the offer
+                </button>
+              </div>
             </div>
+            {expanded === index && (
+              <div className="details">
+                {hairdresser.services.map((service, i) => (
+                  <div key={i} className="service-item">
+                    <p>
+                      {service.name} - {service.price}
+                    </p>
+                    <button className="button" onClick={() => handleClick('book')}>
+                      Book
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
+      
       <div className="info">
-        <div className='week'>
-            <p className="title">Day of the week</p> {/* Dodajemy klasę dla pierwszego <p> */}
-            <hr className="line" /> {/* Dodanie linii */}    
-            <p>Monday</p>
-            <p>Tuesday</p>
-            <p>Wednesday</p>
-            <p>Thursday</p>
-            <p>Friday</p>
-            <p>Saturday</p>
-            <p>Sunday</p>   
-            <hr className="line" /> {/* Dodanie linii */}    
-            <p>Phone number</p>     
+        <div className="week">
+          <p className="title">Days of the week</p>
+          <hr className="line" />
+          <p>Monday</p>
+          <p>Tuesday</p>
+          <p>Wednesday</p>
+          <p>Thursday</p>
+          <p>Friday</p>
+          <p>Saturday</p>
+          <p>Sunday</p>
+          <hr className="line" />
+          <p>Telephone number</p>
         </div>
-        <div className='hours'>
-            <p className="title">Opening hours</p> {/* Dodajemy klasę dla pierwszego <p> */}
-            <hr className="line" /> {/* Dodanie linii */}    
-            <p>10:00 - 18:00</p>
-            <p>10:00 - 18:00</p>
-            <p>10:00 - 18:00</p>
-            <p>10:00 - 18:00</p>
-            <p>10:00 - 18:00</p>
-            <p>closed</p>
-            <p>closed</p>  
-            <hr className="line" /> {/* Dodanie linii */}   
-            <p>537 237 042</p>
+        <div className="hours">
+          <p className="title">Opening hours</p>
+          <hr className="line" />
+          <p>10 AM - 6 PM</p>
+          <p>10 AM - 6 PM</p>
+          <p>10 AM - 6 PM</p>
+          <p>10 AM - 6 PM</p>
+          <p>10 AM - 6 PM</p>
+          <p>closed</p>
+          <p>closed</p>
+          <hr className="line" />
+          <p>+1 (212) 555-1234</p>
         </div>
       </div>
-    
-
-
+      <div className="opinions-header">
+      <h2>Opinions of our clients</h2>
+      </div>
+      <Grades name="Ann Doe" />
+      <Grades name="Jane Smith" />
+      <Grades name="Michael Johnson" />
     </div>
+    
+    
   );
-}
 
-const handleNextClick = (serviceName) => {
-  // Tutaj możesz dodać logikę obsługi kliknięcia przycisku "Contract"
-  console.log(`Kliknięto przycisk "Contract" dla usługi: ${serviceName}`);
-};
+  
+}
 
 const hairdressers = [
   {
-    name: "John Doe",
+    name: 'Ann Doe',
+    image: fry1d,
     services: [
-      { name: "Haircut", price: "$30" },
-      { name: "Coloring", price: "$50" }
-    ]
+      { name: 'haircut ', price: '$15' },
+      { name: 'colourization', price: '$25' },
+
+    ],
   },
   {
-    name: "Jane Smith",
+    name: 'Jane Smith',
+    image: fry2d,
     services: [
-      { name: "Haircut", price: "$25" },
-      { name: "Styling", price: "$35" }
-    ]
+      { name: 'haircut ', price: '$15' },
+      { name: 'stylization a', price: '$25' },
+    ],
   },
   {
-    name: "Michael Johnson",
+    name: 'Michael Johnson',
+    image: fry3c,
     services: [
-      { name: "Coloring", price: "$45" },
-      { name: "Styling", price: "$40" }
-    ]
-  }
+      { name: 'haircut ', price: '$20' },
+      { name: 'stylization ', price: '$30' },
+    ],
+  },
 ];
 
 export default Services;
