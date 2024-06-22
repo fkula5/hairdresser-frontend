@@ -75,15 +75,15 @@ function Services({ setComponent }) {
         <div className="hours">
           <p className="title">Opening hours</p>
           <hr className="line" />
-          <p>10 AM - 6 PM</p>
-          <p>10 AM - 6 PM</p>
-          <p>10 AM - 6 PM</p>
-          <p>10 AM - 6 PM</p>
-          <p>10 AM - 6 PM</p>
+          <p>10:00 - 18:00</p>
+          <p>10:00 - 18:00</p>
+          <p>10:00 - 18:00</p>
+          <p>10:00 - 18:00</p>
+          <p>10:00 - 18:00</p>
           <p>closed</p>
           <p>closed</p>
           <hr className="line" />
-          <p>+1 (212) 555-1234</p>
+          <p>+48 212 555 123</p>
         </div>
       </div>
       <div className="opinions-header">
@@ -105,8 +105,8 @@ const hairdressers = [
     name: 'Ann Doe',
     image: fry1d,
     services: [
-      { name: 'haircut ', price: '$15' },
-      { name: 'colourization', price: '$25' },
+      { name: 'haircut ', price: '40 PLN' },
+      { name: 'colourization', price: '60 PLN' },
 
     ],
   },
@@ -114,16 +114,16 @@ const hairdressers = [
     name: 'Jane Smith',
     image: fry2d,
     services: [
-      { name: 'haircut ', price: '$15' },
-      { name: 'stylization a', price: '$25' },
+      { name: 'haircut ', price: '40 PLN' },
+      { name: 'stylization a', price: '50 PLN' },
     ],
   },
   {
     name: 'Michael Johnson',
     image: fry3c,
     services: [
-      { name: 'haircut ', price: '$20' },
-      { name: 'stylization ', price: '$30' },
+      { name: 'haircut ', price: '40 PLN' },
+      { name: 'stylization ', price: '50 PLN' },
     ],
   },
 ];
